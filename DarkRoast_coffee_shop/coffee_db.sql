@@ -152,5 +152,14 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+---password: Admin1@1
+
+INSERT INTO users(id, name, email, password, user_type) VALUES ('1','admin1','admin@darkroast.com','d5f30f61ce3e5ad48ff43a31b5147aa81bb8b9d0','admin')
+
+---password: Customer1@1
+
+INSERT INTO users(id, name, email, password, user_type) VALUES ('2','customer1','c1@hotmail.com','a28a52750be0858a3fad521306bb94caa3572fbb','user')
+  
 COMMIT;
 
