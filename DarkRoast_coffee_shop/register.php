@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
    //sanitize input data
    $name = mysqli_real_escape_string($conn, $_POST['name']);
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = mysqli_real_escape_string($conn, sha1($_POST['password'])); //using and hashing[SHA1] to protect password
+   $pass = mysqli_real_escape_string($conn, sha1($_POST['password'])); //using hashing[SHA1] to protect password
    $pass_for_checking=mysqli_real_escape_string($conn,$_POST['password']); //will not stored only for checing bc it is raw without hash and salt 
    $cpass = mysqli_real_escape_string($conn, sha1($_POST['cpassword']));
    $user_type =mysqli_real_escape_string($conn,'user'); //mandatory option 
